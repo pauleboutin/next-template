@@ -45,6 +45,7 @@ export function getExampleSampleRate({
   return 0.75;
 }
 
+/** Example lekko that controls the title based on user role */
 export function getTitle({ isAdmin }: { isAdmin: boolean }): string {
   if (isAdmin) {
     return "Admin";
