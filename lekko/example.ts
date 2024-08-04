@@ -44,3 +44,10 @@ export function getExampleSampleRate({
   }
   return 0.75;
 }
+
+export function getTitle({ isAdmin }: { isAdmin: boolean }): string {
+  if (isAdmin) {
+    return "Admin";
+  }
+  return "User";
+}
