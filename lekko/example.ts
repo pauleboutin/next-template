@@ -47,12 +47,9 @@ export function getExampleSampleRate({
 
 /** Example lekko that controls the title based on user role */
 export function getTitle({
-  isAdmin,
+  env
 }: {
-  isAdmin: boolean;
+  env: string;
 }): string {
-  if (isAdmin) {
-    return "This is an Admin Dashboard";
-  }
-  return "This is a User Dashboard";
+  return "env";
 }
