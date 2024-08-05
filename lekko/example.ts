@@ -51,7 +51,7 @@ export function getTitle({
 }: {
   enviro: string;
 }): string {
-  if (enviro === "development" || enviro === "staging") {
+  if (enviro === "development") { //|| enviro === "staging") {
     return "TEST";
   }
   return "LIVE";
