@@ -47,12 +47,9 @@ export function getExampleSampleRate({
 
 /** Example lekko that controls the title based on user role */
 export function getTitle({
-  env
+  enviro
 }: {
-  env: string;
+  enviro: string;
 }): string {
-  if (env !== '') {
-    return "Null ENV value";}
-    else
-  return env;
+  return "I give up";
 }

@@ -9,7 +9,7 @@ if (typeof window === 'undefined') {
 }
 
 export function Title() {
-  const env = process.env.ENV || '';
-  const titletext = useLekkoConfig(getTitle, { env });
+  const env = process.env.ENV || 'ENV not set';
+  const titletext = useLekkoConfig(getTitle, { enviro: env });
   return titletext;
 }
