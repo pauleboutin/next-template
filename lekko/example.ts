@@ -51,5 +51,5 @@ export function getTitle({
 }: {
   enviro: string;
 }): string {
-  return `This is the ${enviro} environment`;
+  return "This is the ${enviro} environment";
 }
