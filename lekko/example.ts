@@ -51,5 +51,8 @@ export function getTitle({
 }: {
   enviro: string;
 }): string {
-  return "This is the ${enviro} environment";
+  if (enviro === "development") {
+    return "Development environment";
+  }
+  return "Staging environment";
 }
