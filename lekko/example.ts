@@ -57,6 +57,7 @@ export function getTitle({
     return "STAGING";
   } else if (enviro === "production") {
     return "PRODUCTION";
-  } else {
+  } 
   return "UNDEFINED";
+  
 }
