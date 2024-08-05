@@ -11,6 +11,6 @@ if (typeof window === 'undefined') {
 export function Title() {
   const env = process.env.ENV || 'ENV not set';
   let titletext = useLekkoConfig(getTitle, { enviro: env });
-  titletext = "This is a " + titletext;
+  titletext = "This is a " + titletext + "environment";
   return titletext;
 }
