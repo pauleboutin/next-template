@@ -51,5 +51,8 @@ export function getTitle({
 }: {
   env: string;
 }): string {
-  return "env";
+  if (env !== '') {
+    return "Null ENV value";}
+    else
+  return env;
 }
