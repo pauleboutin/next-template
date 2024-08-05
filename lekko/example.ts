@@ -52,7 +52,7 @@ export function getTitle({
   enviro: string;
 }): string {
   if (enviro === "development") {
-    return "Development environment";
+    return "development environment";
   }
-  return "Staging environment";
+  return "staging environment";
 }
