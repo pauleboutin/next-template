@@ -1,6 +1,6 @@
 /** Example feature flag, enabled in development environments */
 
-export function getExampleFlag2({ env }: { env: string }): boolean {
+export function getExampleFlagPB({ env }: { env: string }): boolean {
   if (env === "development") {
     return true;
   }
@@ -8,7 +8,7 @@ export function getExampleFlag2({ env }: { env: string }): boolean {
 }
 
 /** Example lekko that controls which LLM users interact with */
-export function getExampleModel2({
+export function getExampleModelPB({
   isAdmin,
   plan,
 }: {
@@ -24,7 +24,7 @@ export function getExampleModel2({
 }
 
 /** Example lekko that controls sampling rate based on contextual factors */
-export function getExampleSampleRate2({
+export function getExampleSampleRatePB({
   env,
   load,
   msgType,
@@ -46,7 +46,7 @@ export function getExampleSampleRate2({
 }
 
 /** Example lekko that controls the title based on a variable */
-export function getTitle2({
+export function getTitlePB({
   enviro
 }: {
   enviro: string;
