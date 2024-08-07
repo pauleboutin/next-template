@@ -13,16 +13,14 @@ if (typeof window === 'undefined') {
 export function Title() {
   const env = process.env.ENV || 'ENV not set';
   const log = useLogger();
-  log.debug('ENV environment variable = ', { env });
-  // Sample message
+  //log.debug('ENV environment variable = ', { env});
+  log.debug(env);
+/*
+const vercelEnv = process.env?.vercel?.environment;
 
-
-// Parse the JSON string
-
-  const vercelEnv = (env as any).vercel?.environment as any;
  // if (vercelEnv) {
     log.debug('Vercel environment = ', vercelEnv); 
-  //}
+  //}*/
 
   let titletext = useLekkoConfig(getTitle, { enviro: env });
   titletext = "This is a " + titletext + " environment";
