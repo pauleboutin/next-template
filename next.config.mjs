@@ -1,5 +1,6 @@
 import { withLekkoNextConfig } from "@lekko/next-sdk/config";
-/* import { withAxiom } from "next-axiom"; */
+const { withAxiom } = import('next-axiom');
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
