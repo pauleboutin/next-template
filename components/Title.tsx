@@ -1,7 +1,7 @@
 "use client";
 
 import { useLekkoConfig } from "@lekko/next-sdk";
-import { getTitle } from "../lekko/example";
+import { getTitle } from "../lekko/paultest";
 
 // Ensure environment variables are loaded
 if (typeof window === 'undefined') {
