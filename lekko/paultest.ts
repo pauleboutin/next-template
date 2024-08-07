@@ -3,11 +3,17 @@
 /** Example lekko that controls the title based on a variable */
 export function getTitle({ enviro }: { enviro: string }): string {
   if (enviro === "development") {
-    return "DEVELOPMENT";
+    return "development";
   } else if (enviro === "staging") {
-    return "STAGING";
+    return "staging";
   } else if (enviro === "production") {
-    return "PRODUCTION";
+    return "production";
+  } else if (enviro === "preview") {
+    return "preview";
+  } else if (enviro === "canary") {
+    return "canary";
+  } else if (enviro === "undefined") {
+    return "undefined";
   }
-  return "UNDEFINED";
+  return "NO_ENVIRONMENT_DECLARED";
 }
