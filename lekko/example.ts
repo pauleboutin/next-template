@@ -1,5 +1,4 @@
 /** Example feature flag, enabled in development environments */
-
 export function getExampleFlag({ env }: { env: string }): boolean {
   if (env === "development") {
     return true;
@@ -44,4 +43,3 @@ export function getExampleSampleRate({
   }
   return 0.75;
 }
-

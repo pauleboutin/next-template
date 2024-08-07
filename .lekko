@@ -1,3 +1,4 @@
 version: v1
 repository: pauleboutin/lekko-configs
 lekko_path: lekko
+lock_sha: c99bc9eef404cf32bdc75945a724823f320e975b
