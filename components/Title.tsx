@@ -26,14 +26,15 @@ if (typeof window === 'undefined') {
 }
 
 export function Title() {
-  const env = process.env.ENV || 'ENV not set';
-  const vercelEnv = process.env.VERCEL_ENV || 'Vercel environment undefined';
+  let env = process.env.ENV || 'undefined';
+  const vercelEnv = process.env.VERCEL_ENV || 'undefined';
 
   const log = useLogger();
   log.debug(`ENV = ${env}`);
   log.debug(`vercel.environment = ${vercelEnv}`);
-  
-
+  if (vercelEnv !== 'undefined') {
+    env = vercelEnv;
+  }
   let titletext = useLekkoConfig(getTitle, { enviro: env });
   titletext = "This is a " + titletext + " environment";
   return titletext;
