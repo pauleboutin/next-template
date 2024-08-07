@@ -14,13 +14,9 @@ export function Title() {
   const env = process.env.ENV || 'ENV not set';
   const log = useLogger();
   //log.debug('ENV environment variable = ', { env});
-  log.debug(env);
-/*
-const vercelEnv = process.env?.vercel?.environment;
+  log.debug(`ENV = ${env}`);
 
- // if (vercelEnv) {
-    log.debug('Vercel environment = ', vercelEnv); 
-  //}*/
+  //log.debug();
 
   let titletext = useLekkoConfig(getTitle, { enviro: env });
   titletext = "This is a " + titletext + " environment";
