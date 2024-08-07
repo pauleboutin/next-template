@@ -19,10 +19,10 @@ export function Title() {
 
 // Parse the JSON string
 
-  const vercelEnv = (env as any).vercel?.environment;
-  if (vercelEnv) {
-  log.debug('Vercel environment = ', vercelEnv); 
-  }
+  const vercelEnv = (env as any).vercel?.environment as any;
+ // if (vercelEnv) {
+    log.debug('Vercel environment = ', vercelEnv); 
+  //}
 
   let titletext = useLekkoConfig(getTitle, { enviro: env });
   titletext = "This is a " + titletext + " environment";
