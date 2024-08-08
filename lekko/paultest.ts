@@ -1,6 +1,7 @@
 
 /** Example lekko that retuns a complex object */
 export interface Merchant {
+  Name: string;
   DeliveryRadius: number;
   Hours: string;
   ParkingLocation: string;
@@ -11,6 +12,7 @@ export interface Merchant {
 export function getMerchant(merchantId: string): Merchant | null {
   if (merchantId === "burger-central") {
       return {
+          Name: "Burger Central",
           DeliveryRadius: 15,
           Hours: "9:00AM - 5:00PM",
           ParkingLocation: "lot_5",
@@ -22,6 +24,7 @@ export function getMerchant(merchantId: string): Merchant | null {
       };
   } else if (merchantId === "huangshen-home") {
       return {
+          Name: "Huang Shen Home",
           DeliveryRadius: 15,
           Hours: "9:00AM - 6:00PM",
           ParkingLocation: "lot_5",
@@ -34,6 +37,7 @@ export function getMerchant(merchantId: string): Merchant | null {
       };
   }
   return  {
+    Name: "None",
     DeliveryRadius: 0,
     Hours: "None",
     ParkingLocation: "None",

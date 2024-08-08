@@ -1,7 +1,7 @@
 "use client";
 
 import { useLekkoConfig } from "@lekko/next-sdk";
-import { getTitle } from "../lekko/paultest";
+import { getTitle, getMerchant, Merchant } from "../lekko/paultest";
 import { useLogger } from 'next-axiom';
 
 interface VercelData {
@@ -20,6 +20,16 @@ interface VercelData {
   };
 }
 
+function merchantToString(merchant: Merchant): string {
+  return `Merchant Details:
+    Name: ${merchant.Name}
+    DeliveryRadius: ${merchant.DeliveryRadius}
+    Hours: ${merchant.Hours}
+    ParkingLocation: ${merchant.ParkingLocation}
+    PrepTime: ${merchant.PrepTime}
+    Sources: ${merchant.Sources.join(', ')}
+  `;
+}
 // Ensure environment variables are loaded
 if (typeof window === 'undefined') {
   require('dotenv').config();
@@ -38,5 +48,12 @@ export function Title() {
   }
   let titletext = useLekkoConfig(getTitle, { enviro: env });
   titletext = "This is a " + titletext + " environment";
+  let merchant = getMerchant("burger-central");
+  if (merchant) {
+    log.debug(merchantToString(merchant));
+  } else {
+    log.debug("Merchant not found");
+  }
+
   return titletext;
 }
