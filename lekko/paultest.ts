@@ -17,3 +17,30 @@ export function getTitle({ enviro }: { enviro: string }): string {
   }
   return "NO_ENVIRONMENT_DECLARED";
 }
+type Merchant = {
+  DeliveryRadius: number;
+  Hours: string;
+  ParkingLocation: string;
+  PrepTime: number;
+  Sources: string[];
+};
+
+export function getMerchant({merchantId}: {merchantId: string}): Merchant {
+  if (merchantId === "burger-central"){
+    return {
+      DeliveryRadius:  15,
+      Hours:           "9:00AM - 5:00PM",
+      ParkingLocation: "lot_5",
+      PrepTime:        15,
+      Sources: ["uber_eats", "doordash"]
+    };
+  }
+  /* else /*if (merchantId === "huangshen-home")*/ 
+    return {
+      DeliveryRadius:  15,
+      Hours:           "9:00AM - 6:00PM",
+      ParkingLocation: "lot_5",
+      PrepTime:        15,
+      Sources: ["uber_eats", "doordash", "native"]
+    };
+  }
